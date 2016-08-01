@@ -1,0 +1,124 @@
+\mode<all>
+
+\newcommand{\tti@horizontaloffset}{\hspace{2ex}}
+\newenvironment{tti@horizontaloffsetenv}
+    {\tti@horizontaloffset}
+    {\tti@horizontaloffset}
+
+\AtBeginDocument{
+  \abovedisplayskip=0.25em
+  \belowdisplayskip=0.25em
+  \abovedisplayshortskip=0.25em
+  \belowdisplayshortskip=0.25em
+  \textfloatsep=0.5em
+  \floatsep=0.5em
+  \intextsep=0.5em
+  \dbltextfloatsep=\textfloatsep
+  \dblfloatsep=\floatsep
+  \abovecaptionskip=0.5em
+  \belowcaptionskip=\abovecaptionskip
+}
+
+\renewenvironment{figure}[1][]
+    {\vspace{0.4em}\def\@captype{figure}\par\centering}{\par\vspace{0.2em}}
+
+
+% font
+
+%% size
+
+\setbeamerfont*{frametitle}{size=\large}
+\setbeamerfont*{block title}{size=\large}
+\setbeamerfont*{block body}{size=\normalsize}
+
+\setbeamerfont*{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont*{itemize/enumerate subbody}{parent=itemize/enumerate body}
+\setbeamerfont*{itemize/enumerate subsubbody}{parent=itemize/enumerate subbody}
+\setbeamerfont*{caption}{size=\normalsize}
+
+\setbeamerfont*{title}{size=\LARGE}
+\setbeamerfont*{author}{size=\Large}
+\setbeamerfont*{institute}{parent=author}
+
+%% colors
+
+\definecolor{airforceblue}{rgb}{0.36,0.54,0.66}
+\definecolor{ttiblue}{rgb}{0.059,0.035,0.16}
+
+\setbeamercolor*{headandfootline}{fg=white,bg=ttiblue}
+\setbeamercolor*{frametitle}{fg=white,bg=airforceblue}
+\setbeamercolor*{block title}{fg=white,bg=airforceblue}
+\setbeamercolor*{itemize item}{fg=ttiblue}
+\setbeamercolor*{itemize subitem}{parent=itemize item}
+\setbeamercolor*{itemize subsubitem}{parent=itemize item}
+\setbeamercolor*{enumerate item}{fg=black}
+\setbeamercolor*{enumerate subitem}{parent=enumerate item}
+\setbeamercolor*{enumerate subsubitem}{parent=enumerate item}
+\setbeamercolor*{bibliography entry title}{fg=black}
+\setbeamercolor*{bibliography entry author}{parent=bibliography entry title}
+\setbeamercolor*{bibliography entry location}{parent=bibliography entry title}
+\setbeamercolor*{bibliography entry note}{parent=bibliography entry title}
+\setbeamercolor*{bibliography item}{parent=bibliography entry title}
+
+% templates
+
+%% block
+
+\setbeamertemplate{block begin}{%
+  \begin{beamercolorbox}[sep=1ex,wd=\textwidth,colsep=0ex,colsep*=0ex]
+                        {block title}
+    \usebeamerfont{block title}{\insertblocktitle}
+  \end{beamercolorbox}
+  \vspace{0.5em}
+  \begin{minipage}{\textwidth}}
+\setbeamertemplate{block end}{\end{minipage}\vspace{0.1em}}
+
+%% enumeration
+
+\newcommand{\tti@listindent}{3.5ex}
+\setbeamertemplate{itemize/enumerate body begin}
+                  {\setlength{\leftmargini}{\tti@listindent}}
+\setbeamertemplate{itemize/enumerate subbody begin}
+                  {\setlength{\leftmarginii}{\tti@listindent}}
+\setbeamertemplate{itemize/enumerate subsubbody begin}
+                  {\setlength{\leftmarginiii}{\tti@listindent}}
+\setbeamertemplate{enumerate item}{(\insertenumlabel)}
+
+%% caption
+
+\setbeamertemplate{caption}{\insertcaption}
+
+%% headline and footline
+
+\setbeamertemplate{headline}{
+  \begin{beamercolorbox}[sep=2.5em,wd=\paperwidth]{headandfootline}
+    \begin{tti@horizontaloffsetenv}
+      \begin{minipage}{\textwidth}
+        {\usebeamercolor{title}\usebeamerfont{title}\textbf{\insertshorttitle}}\par
+        \vspace{1em}
+        {\usebeamercolor{institute}\usebeamerfont{institute}\insertinstitute}
+        \hspace{2ex}
+        {\usebeamercolor{author}\usebeamerfont{author}\insertauthor}\par
+      \end{minipage}
+    \end{tti@horizontaloffsetenv}
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[sep=2ex,wd=\paperwidth]{headandfootline}
+  \end{beamercolorbox}
+}
+
+%% bibliography
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+%% titlepage
+
+\setbeamertemplate{title page}{
+  \centering
+  {\Huge Any title page is NOT supported.}
+}
+
+
+\mode<all>
