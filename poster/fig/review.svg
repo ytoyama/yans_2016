@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="228.45901mm"
-   height="46.160526mm"
-   viewBox="0 0 809.50043 163.56091"
+   width="150.47493mm"
+   height="77.671738mm"
+   viewBox="0 0 533.17887 275.2148"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -26,14 +26,29 @@
        orient="auto"
        refY="0"
        refX="0"
-       id="marker4526"
+       id="TriangleOutS"
        style="overflow:visible"
        inkscape:isstock="true">
       <path
-         id="path4392"
+         id="path4332"
          d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
-         style="fill:#062077;fill-opacity:1;fill-rule:evenodd;stroke:#062077;stroke-width:1pt;stroke-opacity:1"
+         style="fill:#001f80;fill-opacity:1;fill-rule:evenodd;stroke:#001f80;stroke-width:1pt;stroke-opacity:1"
          transform="scale(0.2,0.2)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Send"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4217"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
          inkscape:connector-curvature="0" />
     </marker>
   </defs>
@@ -44,15 +59,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35000001"
-     inkscape:cx="551.85132"
-     inkscape:cy="658.65801"
+     inkscape:zoom="0.98994952"
+     inkscape:cx="285.96319"
+     inkscape:cy="149.77999"
      inkscape:document-units="px"
-     inkscape:current-layer="g4907"
+     inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:snap-bbox="false"
      inkscape:bbox-nodes="false"
-     inkscape:window-width="1054"
+     inkscape:window-width="1342"
      inkscape:window-height="1064"
      inkscape:window-x="0"
      inkscape:window-y="14"
@@ -72,8 +87,8 @@
     <inkscape:grid
        type="xygrid"
        id="grid3336"
-       originx="-625.16377"
-       originy="-918.21952" />
+       originx="-627.35717"
+       originy="-806.5656" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -91,7 +106,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-625.1638,29.418543)">
+     transform="translate(-627.35724,29.418548)">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#001f80;stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutS)"
+       d="M 940.00012,62.361905 C 1000,42.361895 1020,122.36189 1020,122.36189"
+       id="path4178"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:60px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -176,7 +197,14 @@
        transform="matrix(-2.6838979,0,0,-2.9399308,1414.484,1808.3509)" />
     <g
        id="g4912"
-       transform="translate(0,-2.0707817)">
+       transform="translate(2.1934373,-2.0708019)">
+      <rect
+         y="-26.0256"
+         x="626.48596"
+         height="160.9166"
+         width="333.99994"
+         id="rect10804"
+         style="fill:#ffffff;fill-opacity:1;stroke:#9a9a9a;stroke-width:2.64432168;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <text
          sodipodi:linespacing="125%"
          id="text10329-4"
@@ -204,17 +232,10 @@
            y="123.34743"
            x="647.43365"
            sodipodi:role="line">部屋も快適でした。</tspan></text>
-      <rect
-         y="-26.0256"
-         x="626.48596"
-         height="160.9166"
-         width="333.99994"
-         id="rect10804"
-         style="fill:none;fill-opacity:1;stroke:#9a9a9a;stroke-width:2.64432168;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
        id="g4228"
-       transform="translate(-211.55123,-6.4800834)">
+       transform="translate(-458.77882,149.99997)">
       <g
          transform="matrix(1.2846546,0,0,1.2846546,2237.1762,-744.11848)"
          id="g10797">
@@ -302,34 +323,39 @@
       <text
          sodipodi:linespacing="125%"
          id="text4988-2"
-         y="104.28872"
-         x="1333.5006"
+         y="94.288719"
+         x="1363.3431"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
-           y="104.28872"
-           x="1333.5006"
+           y="94.288719"
+           x="1363.3431"
            id="tspan4990-7"
-           sodipodi:role="line">レーティングラベル</tspan></text>
+           sodipodi:role="line"
+           style="font-size:32.5px">レーティングラベル</tspan></text>
     </g>
-    <g
-       id="g4907"
-       transform="translate(-49.356348,-4.3798007e-6)">
-      <text
-         sodipodi:linespacing="125%"
-         id="text4988"
-         y="11.064793"
-         x="1054.1451"
-         style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           y="11.064793"
-           x="1054.1451"
-           id="tspan4990"
-           sodipodi:role="line">予測</tspan></text>
-      <path
-         inkscape:connector-curvature="0"
-         id="path4238"
-         d="m 1020,52.36192 120,0"
-         style="fill:#062077;fill-opacity:1;fill-rule:evenodd;stroke:#062077;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4526)" />
-    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1011.9614"
+       y="54.646732"
+       id="text4988"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4990"
+         x="1011.9614"
+         y="54.646732"
+         style="font-size:35px">予測</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4988-2-1"
+       y="167.72571"
+       x="707.79608"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="167.72571"
+         x="707.79608"
+         id="tspan4990-7-2"
+         sodipodi:role="line"
+         style="font-size:32.5px">商品レビュー</tspan></text>
   </g>
 </svg>

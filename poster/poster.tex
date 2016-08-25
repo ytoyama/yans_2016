@@ -35,6 +35,7 @@
 \date{\today}
 
 
+
 \begin{document}
 \begin{frame}[t]
 \vspace{-1em} % HACK
@@ -49,7 +50,13 @@
       \end{itemize}
     \end{block}
     \begin{figure}
-      \includegraphics[width=0.7\linewidth]{fig/review.pdf}
+      \begin{subfigure}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{fig/review.pdf}
+      \end{subfigure}%
+      ~
+      \begin{subfigure}{0.45\linewidth}
+        \includegraphics[width=\linewidth]{fig/logogram_and_ideogram.pdf}
+      \end{subfigure}
     \end{figure}
   \end{column}
   \begin{column}{0.9\mycolumnwidth}
@@ -84,19 +91,45 @@
         \item 特徴
           \begin{itemize}
             \item \fire{フォント画像}から文字の意味情報を抽出
-            \item HAN\cite{yang16}の手法を基に文字からの文書の階層構造を利用
+            \item HAN\cite{yang16}の手法を基に文字からの\fire{文書の階層構造}を利用
           \end{itemize}
         \item 予測過程
           \begin{enumerate}
             \item CNNによりフォント画像を文字埋め込みを生成
-            \item 文字から単語、単語から文、文から文書へ階層的にGRU-RNNを用いて
-                  埋め込みを生成
+            \item 文字から単語、単語から文、文から文書へ階層的に \\
+                  GRU-RNNを用いて埋め込みを生成
             \item 文書埋め込みからラベルを予測
           \end{enumerate}
       \end{itemize}
       \begin{figure}
         \includegraphics[width=0.8\linewidth]{fig/fcwsd.pdf}
       \end{figure}
+      \begin{itemize}
+        \item アテンション構造 \cite{yang16}
+          {
+            \large
+            \hspace{-8em}
+            \begin{minipage}[t]{0.4\linewidth}
+              \begin{gather*}
+                u_i = \tanh (W h_{i} + b) \\
+                \alpha_i = \frac{\exp (u^T_i u_{context})}
+                                {\sum_i \exp (u^T_i u_{context})} \\
+                \hat{h} = \sum_i \alpha_i h_i
+              \end{gather*}
+            \end{minipage}
+            \begin{minipage}[t]{0.1\linewidth}
+              \begin{gather*}
+                \begin{cases}
+                  u_{context} : \text{文脈ベクトル} \\
+                  \alpha_i : \text{アテンション} \\
+                  h_i : \text{下の階層の埋め込み} \\
+                  \hat{h} : \text{上の階層の埋め込み} \\
+                  W, b : \text{線形層のパラメータ}
+                \end{cases}
+              \end{gather*}
+            \end{minipage}
+          }
+      \end{itemize}
     \end{block}
   \end{column}
 
@@ -105,8 +138,13 @@
       \begin{itemize}
         \item \itemtitle{実験設定}
           \begin{itemize}
-            \item 7カテゴリにおける0〜5点のレーティング予測の正答率を測定
-            \item データセット：楽天トラベルのレビュー約330,000件
+            \item 7カテゴリにおける0〜5点のレーティング予測
+            \item データセット：楽天トラベルのレビュー330,000件
+          \end{itemize}
+
+        \item \itemtitle{結果}
+          \begin{itemize}
+            \item 従来手法より高い正答率
           \end{itemize}
       \end{itemize}
 
@@ -119,6 +157,14 @@
           提案手法  & \fire{0.524} \\
         \end{tabular}
       \end{table}
+      \begin{itemize}
+        \item 高いアテンションが付く表現
+          \begin{itemize}
+            \item 「食」、「部屋」、「風呂」等の\fire{カテゴリ}を表すもの
+            \item 「広」、「満」、「広」、「悪」等の\fire{評価}を表すもの
+            \item 「は」、「が」、「も」等の助詞
+          \end{itemize}
+      \end{itemize}
 
       \begin{figure}
         \centering
