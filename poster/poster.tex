@@ -76,7 +76,7 @@
 
 
 \begin{columns}[onlytextwidth,t]
-  \begin{column}{\mycolumnwidth}
+  \begin{column}{1.1\mycolumnwidth}
     \begin{block}{提案手法}
       \begin{itemize}
         \item 入力：フォント画像で表現されたレビュー
@@ -86,10 +86,12 @@
             \item \fire{フォント画像}から文字の意味情報を抽出
             \item HAN\cite{yang16}の手法を基に文字からの文書の階層構造を利用
           \end{itemize}
-        \item 予測手順
+        \item 予測過程
           \begin{enumerate}
-            \item foo
-            \item bar
+            \item CNNによりフォント画像を文字埋め込みを生成
+            \item 文字から単語、単語から文、文から文書へ階層的にGRU-RNNを用いて
+                  埋め込みを生成
+            \item 文書埋め込みからラベルを予測
           \end{enumerate}
       \end{itemize}
       \begin{figure}
@@ -98,8 +100,8 @@
     \end{block}
   \end{column}
 
-  \begin{column}{\mycolumnwidth}
-    \begin{block}{実験}
+  \begin{column}{0.9\mycolumnwidth}
+    \begin{block}{予備実験}
       \begin{itemize}
         \item \itemtitle{実験設定}
           \begin{itemize}
@@ -108,32 +110,37 @@
           \end{itemize}
       \end{itemize}
 
-      \begin{itemize}
-        \item \itemtitle{結果}
-          \begin{itemize}
-            \item 提案手法の従来手法より\fire{高い正答率}
-          \end{itemize}
-      \end{itemize}
-
       \begin{table}
         \centering
-        \begin{tabular}{l | r r}
-          手法 & 正答率 & RMSE \\
+        \begin{tabular}{l | r}
+          手法 & 正答率 \\
           \hline
-          HAN \cite{yang16} & 0.483 & 0.81 \\
-          提案手法 & \fire{0.503} & \fire{0.73} \\
+          従来手法  & 0.503        \\
+          提案手法  & \fire{0.524} \\
         \end{tabular}
       \end{table}
+
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.9\linewidth]{fig/review_1.png}
+        \caption*{レビューのアテンション例 (1)}
+      \end{figure}
+
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{fig/review_2.png}
+        \caption*{レビューのアテンション例 (2)}
+      \end{figure}
     \end{block}
 
     \begin{block}{まとめ}
       \begin{itemize}
         \item フォント画像を用いたレーティング予測及びレビュー解析の手法を提案
         \item 提案手法による従来手法\cite{yang16}より高い正答率
-        \item アテンションの可視化により
+        \item アテンションの可視化によるレビューの解析
         \item \itemtitle{今後の予定}
           \begin{itemize}
-            \item 可視化の方法を洗練
+            \item フォント画像に対するアテンションの可視化の実装
           \end{itemize}
       \end{itemize}
     \end{block}
