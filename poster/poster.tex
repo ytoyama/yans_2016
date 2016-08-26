@@ -104,31 +104,29 @@
       \begin{figure}
         \includegraphics[width=0.85\linewidth]{fig/fcwsd.pdf}
       \end{figure}
+      \vspace{-1ex} % HACK
       \begin{itemize}
         \item アテンション構造 \cite{yang16}
-          {
-            \large
-            \hspace{-8em} % HACK
-            \begin{minipage}[t]{0.4\linewidth}
-              \begin{gather*}
-                u_i = \tanh (W h_{i} + b) \\
-                \alpha_i = \frac{\exp (u^T_i u_{context})}
-                                {\sum_i \exp (u^T_i u_{context})} \\
-                \hat{h} = \sum_i \alpha_i h_i
-              \end{gather*}
-            \end{minipage}
-            \begin{minipage}[t]{0.1\linewidth}
-              \begin{gather*}
-                \begin{cases}
-                  u_{context} : \text{文脈ベクトル} \\
-                  \alpha_i : \text{アテンション} \\
-                  h_i : \text{下の階層の埋め込み} \\
-                  \hat{h} : \text{上の階層の埋め込み} \\
-                  W, b : \text{線形層のパラメータ}
-                \end{cases}
-              \end{gather*}
-            \end{minipage}
-          }
+          \hspace{-8em} % HACK
+          \begin{minipage}[t]{0.4\linewidth}
+            \begin{gather*}
+              u_i = \tanh (W h_{i} + b) \\
+              \alpha_i = \frac{\exp (u^T_i u_{context})}
+                              {\sum_i \exp (u^T_i u_{context})} \\
+              \hat{h} = \sum_i \alpha_i h_i
+            \end{gather*}
+          \end{minipage}
+          \begin{minipage}[t]{0.1\linewidth}
+            \begin{gather*}
+              \begin{cases}
+                u_{context} : \text{文脈ベクトル} \\
+                \alpha_i : \text{アテンション} \\
+                h_i : \text{下の階層の埋め込み} \\
+                \hat{h} : \text{上の階層の埋め込み} \\
+                W, b : \text{線形層のパラメータ}
+              \end{cases}
+            \end{gather*}
+          \end{minipage}
       \end{itemize}
     \end{block}
   \end{column}
